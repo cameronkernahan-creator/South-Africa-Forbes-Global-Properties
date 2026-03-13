@@ -399,6 +399,11 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
 .cta-contact strong { color:var(--white); font-weight:400; }
 .cta-contact a { color:var(--gold); text-decoration:none; }
 
+
+/* HEADSHOTS */
+.headshot{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--border-g);flex-shrink:0}
+.leader-header{display:flex;align-items:center;gap:18px;margin-bottom:12px}
+
 @media (max-width:820px) {
   .slide { padding: 60px 6%; }
   .nav-dots { display:none; }
@@ -423,7 +428,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
   <div class="cover-tagline">The world's most trusted real estate brand, now anchored in South Africa. A structured opportunity to invest in a defining franchise at inception.</div>
   <div class="cover-pills">
     <div class="pill">Investment<strong>R3,000,000</strong></div>
-    <div class="pill">Return<strong>20% Profit Share + Buyout</strong></div>
+    <div class="pill">Return<strong>20% Profit Share + Capital Return</strong></div>
     <div class="pill">Term<strong>6 Years</strong></div>
   </div>
   <span class="pn">p. 01</span>
@@ -629,7 +634,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
         </div>
         <div class="sa-kp">
           <div class="sa-kp-num">03</div>
-          <div class="sa-kp-text"><strong>Structured Returns</strong>20% annual profit share with a R3.5M buyout option after Year 6. Total projected return of R6.5M on a R3M investment. 2.17x capital multiple.</div>
+          <div class="sa-kp-text"><strong>Structured Returns</strong>20% annual profit share plus return of capital after Year 6. Total projected return of approximately R8.6M on a R3M investment. 2.85x capital multiple. Estimated IRR of 18 to 19% per annum.</div>
         </div>
 
       </div>
@@ -655,7 +660,10 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
     <div class="sa-right r d2">
       <div style="margin-bottom:40px">
         <div class="eyebrow" style="margin-bottom:12px">CEO & Founder</div>
-        <div style="font-family:'Raleway',sans-serif;font-weight:200;font-size:28px;color:#fff;margin-bottom:12px">Keegan Steyn</div>
+        <div class="leader-header">
+          <img class="headshot" src="data:image/jpeg;base64,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" alt="Keegan Steyn">
+          <div style="font-family:'Raleway',sans-serif;font-weight:200;font-size:28px;color:#fff">Keegan Steyn</div>
+        </div>
         <div style="font-size:13px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.55)">
           Keegan brings deep expertise in South Africa's luxury property market with established relationships across the country. His network includes high-net-worth private sellers, leading developers, and institutional property investors. Keegan was personally identified, selected, and furthermore secured the Forbes Global Properties license for South Africa.
         </div>
@@ -666,7 +674,10 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
       </div>
       <div style="border-top:1px solid rgba(201,169,110,.12);padding-top:28px">
         <div class="eyebrow" style="margin-bottom:12px">Marketing Director & Head of Production</div>
-        <div style="font-family:'Raleway',sans-serif;font-weight:200;font-size:28px;color:#fff;margin-bottom:12px">Cameron Kernahan</div>
+        <div class="leader-header">
+          <img class="headshot" src="data:image/jpeg;base64,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" alt="Cameron Kernahan">
+          <div style="font-family:'Raleway',sans-serif;font-weight:200;font-size:28px;color:#fff">Cameron Kernahan</div>
+        </div>
         <div style="font-size:13px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.55)">
           Cameron is a filmmaker, brand strategist, and entrepreneur who operates Voyager Visual, a premium boutique content agency serving luxury hospitality, real estate, and founder-led brands across Africa, Europe, and the Middle East. Cameron brings cinema-grade production, AI-integrated Notion systems, and a proprietary 4P marketing methodology purpose-built for luxury real estate.
         </div>
@@ -697,24 +708,24 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
       <div class="inv-cell-sub">Of annual distributable profits</div>
     </div>
     <div class="inv-cell">
-      <div class="inv-cell-label">Buyout Option</div>
-      <div class="inv-cell-value">R3,500,000</div>
-      <div class="inv-cell-sub">After Year 6</div>
+      <div class="inv-cell-label">Capital Returned</div>
+      <div class="inv-cell-value">R3,000,000</div>
+      <div class="inv-cell-sub">Return of capital, Year 6</div>
     </div>
     <div class="inv-cell">
       <div class="inv-cell-label">Term</div>
       <div class="inv-cell-value">6 Years</div>
-      <div class="inv-cell-sub">Profit share begins when profitable</div>
+      <div class="inv-cell-sub">Dividends begin Year 5</div>
     </div>
     <div class="inv-cell">
       <div class="inv-cell-label">Total Return</div>
-      <div class="inv-cell-value">R6,522,760</div>
-      <div class="inv-cell-sub">Profit share + buyout</div>
+      <div class="inv-cell-value">R8,574,000</div>
+      <div class="inv-cell-sub">Dividends + capital return</div>
     </div>
     <div class="inv-cell">
       <div class="inv-cell-label">Capital Multiple</div>
-      <div class="inv-cell-value">2.17×</div>
-      <div class="inv-cell-sub">Return on invested capital</div>
+      <div class="inv-cell-value">2.85×</div>
+      <div class="inv-cell-sub">~18–19% IRR per annum</div>
     </div>
   </div>
   <span class="pn">p. 10</span>
@@ -787,11 +798,11 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
   <div class="eyebrow r" style="margin-bottom:16px">Return Structure</div>
   <div class="formula-wrap r d1">
     <div class="formula">
-      <span class="f-part">R3,022,760</span>
+      <span class="f-part">R5,574,000</span>
       <span class="f-op">+</span>
-      <span class="f-part">R3,500,000</span>
+      <span class="f-part">R3,000,000</span>
       <span class="f-op">=</span>
-      <span class="f-eq">R6,522,760</span>
+      <span class="f-eq">R8,574,000</span>
     </div>
   </div>
   <div class="return-strip r d2">
@@ -801,18 +812,18 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
       <div class="rs-sub">Investor capital</div>
     </div>
     <div class="rs-cell">
-      <div class="rs-label">Profit Share (6 Years)</div>
-      <div class="rs-value gold">R3,022,760</div>
-      <div class="rs-sub">20% of distributable profits</div>
+      <div class="rs-label">Total Dividends (Yr 5 + Yr 6)</div>
+      <div class="rs-value gold">R5,574,000</div>
+      <div class="rs-sub">~R2.0M Year 5 + ~R3.5M Year 6</div>
     </div>
     <div class="rs-cell">
-      <div class="rs-label">Buyout — After Year 6</div>
-      <div class="rs-value">R3,500,000</div>
-      <div class="rs-sub">2.17× total capital multiple</div>
+      <div class="rs-label">Capital Returned — Year 6</div>
+      <div class="rs-value">R3,000,000</div>
+      <div class="rs-sub">2.85× total capital multiple</div>
     </div>
   </div>
   <p style="margin-top:24px;font-size:12px;color:rgba(255,255,255,.28);max-width:600px;line-height:1.7;" class="r d3">
-    Investors receive 20% of annual distributable profits once the company is profitable and a five-month operating reserve has been maintained. After the six-year term, the company exercises a buyout option at R3,500,000. Profit share distributions begin in Year 5 as the company reaches profitability after reinvestment and reserve requirements.
+    Investors receive 20% of annual distributable profits once the company is profitable and a four-month operating reserve has been established. The business experiences startup losses in Years 1 to 3 while revenue scales, with Year 4 profits used to rebuild capital and establish reserves. Dividend distributions begin in Year 5. After the six-year term, investor capital of R3,000,000 is returned in full. Total projected cash received: approximately R8,574,000 representing a 2.85x return multiple and an estimated IRR of 18 to 19% per annum.
   </p>
   <span class="pn" style="color:rgba(255,255,255,.3)">p. 12</span>
 </section>
@@ -827,9 +838,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
       <div class="eyebrow r" style="color:#c0392b;margin-bottom:24px">Revenue Forecast</div>
       <div class="section-h r d1" style="font-size:clamp(28px,3.8vw,48px);margin-bottom:36px">Six-year<br>trajectory.</div>
       <div class="bars-wrap" id="barsWrap">
-        <div class="bar-row r d2"><span class="b-yr">Year 1</span><div class="b-track"><div class="b-fill" style="width:3.3%"></div></div><span class="b-val" style="color:var(--text-mid)">R1.1M</span></div>
-        <div class="bar-row r d3"><span class="b-yr">Year 2</span><div class="b-track"><div class="b-fill" style="width:16.7%"></div></div><span class="b-val" style="color:var(--text-mid)">R5.6M</span></div>
-        <div class="bar-row r d4"><span class="b-yr">Year 3</span><div class="b-track"><div class="b-fill" style="width:30%"></div></div><span class="b-val">R10.1M</span></div>
+        <div class="bar-row r d2"><span class="b-yr">Year 1</span><div class="b-track"><div class="b-fill" style="width:6.7%"></div></div><span class="b-val" style="color:var(--text-mid)">R2.3M</span></div>
+        <div class="bar-row r d3"><span class="b-yr">Year 2</span><div class="b-track"><div class="b-fill" style="width:20%"></div></div><span class="b-val" style="color:var(--text-mid)">R6.8M</span></div>
+        <div class="bar-row r d4"><span class="b-yr">Year 3</span><div class="b-track"><div class="b-fill" style="width:33.3%"></div></div><span class="b-val">R11.3M</span></div>
         <div class="bar-row r d5"><span class="b-yr">Year 4</span><div class="b-track"><div class="b-fill" style="width:50%"></div></div><span class="b-val">R16.9M</span></div>
         <div class="bar-row r d6"><span class="b-yr">Year 5</span><div class="b-track"><div class="b-fill" style="width:73.3%"></div></div><span class="b-val">R24.8M</span></div>
         <div class="bar-row r d7"><span class="b-yr">Year 6</span><div class="b-track"><div class="b-fill" style="width:100%"></div></div><span class="b-val" style="color:#b8860b;font-weight:500">R33.8M</span></div>
@@ -841,15 +852,15 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
           <tr><th>Year</th><th>Property Sales</th><th>Co. Revenue</th><th>Net</th><th>Investor</th></tr>
         </thead>
         <tbody>
-          <tr><td>Yr 1</td><td>R50M</td><td>R1,125,000</td><td class="neg">−R8.8M</td><td style="color:var(--text-lt)">—</td></tr>
-          <tr><td>Yr 2</td><td>R250M</td><td>R5,625,000</td><td class="neg">−R4.6M</td><td style="color:var(--text-lt)">—</td></tr>
-          <tr><td>Yr 3</td><td>R450M</td><td>R10,125,000</td><td class="neg">−R1.9M</td><td style="color:var(--text-lt)">—</td></tr>
+          <tr><td>Yr 1</td><td>R100M</td><td>R2,250,000</td><td class="neg">−R7.7M</td><td style="color:var(--text-lt)">—</td></tr>
+          <tr><td>Yr 2</td><td>R300M</td><td>R6,750,000</td><td class="neg">−R3.5M</td><td style="color:var(--text-lt)">—</td></tr>
+          <tr><td>Yr 3</td><td>R500M</td><td>R11,250,000</td><td class="neg">−R809K</td><td style="color:var(--text-lt)">—</td></tr>
           <tr><td>Yr 4</td><td>R750M</td><td>R16,875,000</td><td class="pos">+R3.6M</td><td style="color:var(--text-lt)">—</td></tr>
-          <tr><td>Yr 5</td><td>R1.1B</td><td>R24,750,000</td><td class="pos">+R4.1M</td><td class="pos">R818K</td></tr>
-          <tr><td>Yr 6</td><td>R1.5B</td><td>R33,750,000</td><td class="pos">+R11.0M</td><td class="pos">R2.2M</td></tr>
+          <tr><td>Yr 5</td><td>R1.1B</td><td>R24,750,000</td><td class="pos">+R10.2M</td><td class="pos">R2.0M</td></tr>
+          <tr><td>Yr 6</td><td>R1.5B</td><td>R33,750,000</td><td class="pos">+R17.7M</td><td class="pos">R3.5M</td></tr>
         </tbody>
       </table>
-      <div class="model-note r d3">Company retains 2.25% of total property sales (4.5% commission, 50% retained). 5-month operating reserve maintained. 20% of distributable profits to investor.</div>
+      <div class="model-note r d3">Company retains 2.25% of total property sales (4.5% commission, 50% retained). 4-month operating reserve maintained before distributions. 20% of distributable profits to investor. Starting capital: R12M.</div>
     </div>
   </div>
   <span class="pn">p. 13</span>
@@ -1053,7 +1064,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(
     <div class="cta-card">
       <div class="cta-card-icon">◎</div>
       <div class="cta-card-label">Defined Return</div>
-      <div class="cta-card-body">20% annual profit share from distributable profits plus R3.5M buyout after Year 6. Total projected return of R6.5M on R3M invested. 2.17x.</div>
+      <div class="cta-card-body">20% annual profit share from distributable profits plus full return of capital after Year 6. Total projected return of approximately R8.6M on R3M invested. 2.85x multiple.</div>
     </div>
     <div class="cta-card">
       <div class="cta-card-icon">◇</div>
