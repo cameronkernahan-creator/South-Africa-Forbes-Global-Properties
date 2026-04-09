@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Africa Forbes Global Properties | Introduction</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sand: #F5EDE0;
+  --cream: #FAF6F0;
+  --gold: #B8965A;
+  --earth: #3D3229;
+  --charcoal: #1A1614;
+  --deep: #0D0B09;
+  --olive: #6B7346;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--cream);
+  color: var(--earth);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Grain overlay ── */
+.grain {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none; z-index: 9999; opacity: .025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* ── Page structure ── */
+.page {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Cover ── */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 48px;
+  background: var(--deep);
+  color: #fff;
+  position: relative;
+}
+
+.cover-badge {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .45em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 48px;
+  opacity: .85;
+}
+
+.cover-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(36px, 5.5vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -.03em;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.cover-line {
+  width: 64px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 28px;
+  opacity: .5;
+}
+
+.cover-sub {
+  font-weight: 200;
+  font-size: clamp(13px, 1.2vw, 16px);
+  color: rgba(255,255,255,.45);
+  letter-spacing: .08em;
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+.cover-footer {
+  position: absolute;
+  bottom: 32px;
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.2);
+}
+
+/* ── Sections ── */
+.section {
+  padding: 96px 0;
+  border-bottom: 1px solid rgba(61,50,41,.08);
+}
+
+.section:last-child { border-bottom: none; }
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .38em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--earth);
+  margin-bottom: 28px;
+}
+
+.body-text {
+  font-weight: 300;
+  font-size: clamp(14px, 1.15vw, 16px);
+  line-height: 1.8;
+  color: rgba(61,50,41,.62);
+  max-width: 620px;
+}
+
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 36px 0;
+  opacity: .45;
+}
+
+/* ── Stat grid ── */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 56px;
+}
+
+.stat {
+  padding: 36px 24px;
+  text-align: center;
+  border-right: 1px solid rgba(61,50,41,.08);
+}
+
+.stat:last-child { border-right: none; }
+
+.stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 3.5vw, 52px);
+  font-weight: 400;
+  color: var(--earth);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(61,50,41,.4);
+  font-weight: 400;
+}
+
+/* ── Benefit cards ── */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.benefit {
+  padding: 36px 32px;
+  border: 1px solid rgba(61,50,41,.08);
+  background: rgba(255,255,255,.5);
+}
+
+.benefit h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--earth);
+  margin-bottom: 12px;
+}
+
+.benefit p {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(61,50,41,.55);
+  line-height: 1.7;
+}
+
+/* ── Quote ── */
+.quote-block {
+  padding: 44px 48px;
+  background: rgba(184,150,90,.04);
+  border-left: 2px solid var(--gold);
+  margin-top: 48px;
+}
+
+.quote-block p {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(17px, 1.6vw, 23px);
+  font-style: italic;
+  line-height: 1.55;
+  color: rgba(61,50,41,.7);
+}
+
+.quote-block .attr {
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ── Contact section ── */
+.contact-section {
+  background: var(--deep);
+  color: #fff;
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.contact-section .eyebrow { color: var(--gold); }
+
+.contact-section h2 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.contact-section .body-text {
+  color: rgba(255,255,255,.45);
+  margin: 0 auto 40px;
+}
+
+.contact-detail {
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  line-height: 2.2;
+}
+
+.contact-detail strong {
+  font-weight: 400;
+  color: rgba(255,255,255,.85);
+}
+
+.contact-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.contact-role {
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.website-link {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: .7;
+}
+
+/* ── Process steps ── */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.process-step {
+  padding: 32px 24px;
+  border: 1px solid rgba(61,50,41,.08);
+  background: rgba(255,255,255,.5);
+  text-align: center;
+}
+
+.step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: .3;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.process-step h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--earth);
+  margin-bottom: 10px;
+}
+
+.process-step p {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(61,50,41,.5);
+  line-height: 1.65;
+}
+
+/* ── Print / PDF ── */
+@media print {
+  body { background: #fff; }
+  .grain { display: none; }
+  .cover { min-height: auto; padding: 120px 48px; page-break-after: always; }
+  .section { page-break-inside: avoid; padding: 60px 0; }
+  .contact-section { page-break-before: always; }
+  .stat-grid, .benefit-grid, .process-grid { page-break-inside: avoid; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .stat-grid { grid-template-columns: 1fr; }
+  .stat { border-right: none; border-bottom: 1px solid rgba(61,50,41,.08); }
+  .stat:last-child { border-bottom: none; }
+  .benefit-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
+  .cover { padding: 60px 32px; }
+  .page { padding: 0 28px; }
+  .quote-block { padding: 32px; }
+}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ═══════════════════════════════════════
+     COVER
+     ═══════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-badge">Forbes Global Properties &nbsp;&middot;&nbsp; South Africa</div>
+  <h1 class="cover-title">Your Property.<br>The World's Stage.</h1>
+  <div class="cover-line"></div>
+  <p class="cover-sub">An introduction to South Africa's exclusive affiliate of the Forbes Global Properties network.</p>
+  <div class="cover-footer">Confidential &nbsp;&middot;&nbsp; April 2026</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     WHO WE ARE
+     ═══════════════════════════════════════ -->
+<div class="page">
+
+  <div class="section">
+    <div class="eyebrow">Who We Are</div>
+    <h2>South Africa's Gateway<br>to the Global Luxury Market</h2>
+    <p class="body-text">
+      South Africa Forbes Global Properties is the exclusive South African affiliate of the Forbes Global Properties network &mdash; connecting the country's finest residences with qualified buyers across six continents.
+    </p>
+    <div class="divider"></div>
+    <p class="body-text">
+      Backed by one of the most recognised and trusted names in business media, we offer homeowners something no local agency can: immediate, credible access to an international audience of high-net-worth individuals actively seeking luxury real estate.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-number">150+</div>
+        <div class="stat-label">Countries Reached</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">190M+</div>
+        <div class="stat-label">Monthly Forbes Audience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">$1T+</div>
+        <div class="stat-label">Combined Listing Value</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       WHY LIST WITH US
+       ═══════════════════════════════════════ -->
+  <div class="section">
+    <div class="eyebrow">The Advantage</div>
+    <h2>Why Owners Choose<br>Forbes Global Properties</h2>
+    <p class="body-text">
+      Listing with us is not simply a marketing decision. It is a positioning decision. Your property is presented alongside the world's most extraordinary homes, to an audience that expects nothing less.
+    </p>
+
+    <div class="benefit-grid">
+      <div class="benefit">
+        <h4>The Forbes Brand</h4>
+        <p>Your listing carries the weight of Forbes &mdash; a name synonymous with wealth, credibility, and global influence. It signals that your property belongs in a different category entirely.</p>
+      </div>
+      <div class="benefit">
+        <h4>Global Buyer Network</h4>
+        <p>Direct exposure to qualified international buyers through forbesglobalproperties.com and the wider Forbes media ecosystem &mdash; reaching audiences that local portals simply cannot access.</p>
+      </div>
+      <div class="benefit">
+        <h4>Premium Presentation</h4>
+        <p>Every property receives bespoke editorial-quality marketing &mdash; professional photography, cinematic video, and storytelling that does justice to the home and its setting.</p>
+      </div>
+      <div class="benefit">
+        <h4>Local Expertise, Global Reach</h4>
+        <p>We know the South African market intimately. Combined with the Forbes network, your property benefits from on-the-ground knowledge and worldwide distribution simultaneously.</p>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p>&ldquo;Forbes Global Properties exists to connect extraordinary homes with the people who belong in them. It is the intersection of trust, reach, and uncompromising quality.&rdquo;</p>
+      <div class="attr">Forbes Global Properties</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       HOW IT WORKS
+       ═══════════════════════════════════════ -->
+  <div class="section">
+    <div class="eyebrow">The Process</div>
+    <h2>Effortless from<br>Start to Close</h2>
+    <p class="body-text">
+      We handle everything. From the initial valuation through to global distribution and buyer engagement, the process is designed to be seamless and discreet.
+    </p>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h4>Private Consultation</h4>
+        <p>A confidential conversation to understand your property, your timeline, and your objectives. No obligation, no pressure.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h4>Bespoke Marketing</h4>
+        <p>We create a world-class presentation of your home &mdash; editorial photography, cinematic content, and a compelling narrative distributed globally.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h4>Global Distribution</h4>
+        <p>Your property is placed on forbesglobalproperties.com and promoted across the Forbes network to qualified buyers in 150+ countries.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       WHAT WE REPRESENT
+       ═══════════════════════════════════════ -->
+  <div class="section">
+    <div class="eyebrow">Portfolio</div>
+    <h2>The Properties We<br>Are Proud to Represent</h2>
+    <p class="body-text">
+      From oceanfront estates along the Atlantic Seaboard to private safari lodges in KwaZulu-Natal, wine estates in the Cape Winelands to contemporary penthouses in Sandton &mdash; we represent South Africa's most distinguished addresses.
+    </p>
+    <div class="divider"></div>
+    <p class="body-text">
+      Each property is selected for its quality, character, and appeal to the global market. We do not list everything. We list what deserves to be seen by the world.
+    </p>
+  </div>
+
+</div><!-- end .page -->
+
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+     ═══════════════════════════════════════ -->
+<div class="contact-section">
+  <div class="eyebrow">Let's Talk</div>
+  <h2>Begin a Conversation</h2>
+  <p class="body-text">
+    We would welcome the opportunity to discuss how Forbes Global Properties can serve you.
+  </p>
+
+  <div class="contact-name">Keegan Steyn</div>
+  <div class="contact-role">CEO & Principal Broker</div>
+  <div class="contact-detail">
+    <strong>keegan@southafricafgp.com</strong><br>
+    +27 82 820 0414
+  </div>
+
+  <div class="website-link">southafricafgp.com</div>
+</div>
+
+</body>
+</html>
